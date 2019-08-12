@@ -188,7 +188,8 @@ def create_callbacks(model, training_model, prediction_model, validation_generat
             ),
             verbose=1,
             save_best_only=True,
-            monitor="mAP",
+            # monitor="mAP",
+            monitor="val_loss",
             mode='max'
         )
         checkpoint = RedirectModel(checkpoint, model)
