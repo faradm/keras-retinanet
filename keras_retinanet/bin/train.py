@@ -190,7 +190,7 @@ def create_callbacks(model, training_model, prediction_model, validation_generat
             save_best_only=True,
             # monitor="mAP",
             monitor="val_loss",
-            mode='max'
+            mode='min'
         )
         checkpoint = RedirectModel(checkpoint, model)
         callbacks.append(checkpoint)
